@@ -28,13 +28,6 @@ typedef struct s_node
 	t_node		*prev;
 }	t_node;
 
-typedef struct s_stack
-{
-	int		size;
-	t_stack	*first;
-	t_stack	*last;
-}	t_stack;
-
 //sort utils
 
 //commands
