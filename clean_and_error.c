@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   commands_gen.c                                     :+:      :+:    :+:   */
+/*   clean_and_error.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 16:01:20 by ccavalca         ###   ########.fr       */
+/*   Created: 2025/11/30 14:24:37 by ccavalca          #+#    #+#             */
+/*   Updated: 2025/11/30 14:26:27 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "push_swap.h"
+#include "push_swap.h"
 
-// void	ss(t_node **a, t_node **b)
-// {
-// 	sa(*a);
-// 	sb(*b);
-// }
+void	ft_free_matrix(char **matrix)
+{
 
-// void	rr(t_node **a, t_node **b)
-// {
-// 	ra(*a);
-// 	rb(*b);
-// }
+}
 
-// void	rrr(t_node **a, t_node **b)
-// {
-// 	rra(*a);
-// 	rrb(*b);
-// }
+void	ft_free_and_error(t_node *list)
+{
+
+}

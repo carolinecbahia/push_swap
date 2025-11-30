@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   commands_gen.c                                     :+:      :+:    :+:   */
+/*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 16:01:20 by ccavalca         ###   ########.fr       */
+/*   Created: 2025/11/30 14:33:17 by ccavalca          #+#    #+#             */
+/*   Updated: 2025/11/30 14:33:45 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "push_swap.h"
+#include "push_swap.h"
 
-// void	ss(t_node **a, t_node **b)
-// {
-// 	sa(*a);
-// 	sb(*b);
-// }
+void	parser(t_node **a)
+{
+	int	*array;
 
-// void	rr(t_node **a, t_node **b)
-// {
-// 	ra(*a);
-// 	rb(*b);
-// }
+}
 
-// void	rrr(t_node **a, t_node **b)
-// {
-// 	rra(*a);
-// 	rrb(*b);
-// }
+void	create_list(t_node a)
+{
+
+}
+
+int	valid_args(t_node *a)
+{
+	int	*array;
+
+	array = parser(a);
+	while (a != NULL)
+	{
+
+	}
+}
+
+int	check_size(t_node a)
+{
+
+}

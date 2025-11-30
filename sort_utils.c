@@ -1,31 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   commands_gen.c                                     :+:      :+:    :+:   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 16:01:20 by ccavalca         ###   ########.fr       */
+/*   Created: 2025/11/30 14:26:44 by ccavalca          #+#    #+#             */
+/*   Updated: 2025/11/30 14:26:54 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "push_swap.h"
-
-// void	ss(t_node **a, t_node **b)
-// {
-// 	sa(*a);
-// 	sb(*b);
-// }
-
-// void	rr(t_node **a, t_node **b)
-// {
-// 	ra(*a);
-// 	rb(*b);
-// }
-
-// void	rrr(t_node **a, t_node **b)
-// {
-// 	rra(*a);
-// 	rrb(*b);
-// }
+#include "push_swap.h"
