@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   commands_b.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 16:01:29 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/02 22:32:25 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,34 +34,22 @@ void	sb(t_node **b)
 
 void	pb(t_node **b, t_node **a)
 {
-	int		temp_value;
-	int		temp_index;
-	t_node	*b_head;
-	t_node	*a_head;
-
-	if (!b || !a || !(*b) || !(*a))
-		return ;
-	b_head = *b;
-	a_head = *a;
-	temp_value = b_head->value;
-	b_head->value = a_head->value;
-	a_head->value = temp_value;
-	temp_index = b_head->index;
-	b_head->index = a_head->index;
-	a_head->index = temp_index;
+	push(a, b);
 	ft_printf("pb\n");
 }
 
-// void	rb(t_node **b)
-// {
-// 	int		temp_value;
-// 	int		temp_index;
-// 	t_node	*head;
-// 	t_node	*last;
+void	rb(t_node **b)
+{
+	if(!b || !(*b) || !(*b)->next)
+		return ;
+	*b = (*b)->next;
+	ft_printf("rb\n");
+}
 
-// 	head = *b;
-// 	last = head->prev;
-// 	last->value = head->value;
-// 	last->index = head->index;
-// 	ft_printf("rb\n");
-// }
+void	rra(t_node **b)
+{
+	if (!b || !(*b) || !(*b)->prev)
+		return ;
+	*b = (*b)->prev;
+	ft_printf("rrb\n");
+}

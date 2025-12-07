@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   commands_a.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 16:01:36 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/02 22:33:46 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,48 +34,22 @@ void	sa(t_node **a)
 
 void	pa(t_node **a, t_node **b)
 {
-	int		temp_value;
-	int		temp_index;
-	t_node	*a_head;
-	t_node	*b_head;
-
-	if (!a || !b || !(*a) || !(*b))
-		return ;
-	a_head = *a;
-	b_head = *b;
-	temp_value = a_head->value;
-	a_head->value = b_head->value;
-	b_head->value = temp_value;
-	temp_index = a_head->index;
-	a_head->index = b_head->index;
-	b_head->index = temp_index;
+	push(b, a);
 	ft_printf("pa\n");
 }
 
-// void	ra(t_node **a)
-// {
-// 	int		temp_value;
-// 	int		temp_index;
-// 	t_node	*head;
-// 	t_node	*last;
+void	ra(t_node **a)
+{
+	if(!a || !(*a) || !(*a)->next)
+		return ;
+	*a = (*a)->next;
+	ft_printf("ra\n");
+}
 
-// 	head = *a;
-// 	last = head->prev;
-// 	last->value = head->value;
-// 	last->index = head->index;
-// 	ft_printf("ra\n");
-// }
-
-// void	rra(t_node **a)
-// {
-// 	int		temp_value;
-// 	int		temp_index;
-// 	t_node	*head;
-// 	t_node	*last;
-
-// 	head = *a;
-// 	last = head->prev;
-// 	head->value = last->value;
-// 	head->index = last->index;
-// 	ft_printf("rra\n");
-// }
+void	rra(t_node **a)
+{
+	if (!a || !(*a) || (*a)->next == *a)
+		return ;
+	*a = (*a)->prev;
+	ft_printf("rra\n");
+}

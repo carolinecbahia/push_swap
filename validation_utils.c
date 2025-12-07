@@ -1,19 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_utils.c                                       :+:      :+:    :+:   */
+/*   validation_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 14:26:44 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/07 17:57:22 by ccavalca         ###   ########.fr       */
+/*   Created: 2025/12/07 17:49:18 by ccavalca          #+#    #+#             */
+/*   Updated: 2025/12/07 17:53:25 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_stack(t_node **a, t_node **b)
+void parser(t_node **a, char **av_split)
+{
+    int i;
+    int ac;
+    
+}
+
+long    ft_atol(char *str_nb)
+{
+    long    nb;
+    
+    return(nb);
+}
+
+int  check_syntax(char *str)
+{
+
+}
+
+int  check_duplicate(t_node *stack, int n)
 {
     
 }
 
+int     is_numeric(char *str)
+{
+
+}

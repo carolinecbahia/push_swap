@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+         #
+#    By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 15:18:11 by ccavalca          #+#    #+#              #
-#    Updated: 2025/11/30 14:30:17 by ccavalca         ###   ########.fr        #
+#    Updated: 2025/12/07 17:01:49 by ccavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,13 @@ CFLAGS = -Wall -Wextra -Werror -I./Libft -I./ft_printf
 LIBFT_DIR = Libft/
 PRINTF_DIR = ft_printf/
 
-SRC =	push_swap.c \
-		clean_and_error.c \
-		commands_a.c \
-		commands_b.c \
-		commands_gen.c \
-		sort.c \
-		sort_utils.c \
+# SRC =	push_swap.c \
+# 		clean_and_error.c \
+# 		commands_a.c \
+# 		commands_b.c \
+# 		commands_gen.c \
+# 		sort.c \
+# 		sort_utils.c \
 
 OBJS = $(SRC:.c=.o)
 

@@ -3,38 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 14:33:17 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/11/30 14:33:45 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/07 17:55:11 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	parser(t_node **a)
-{
-	int	*array;
-
-}
-
-void	create_list(t_node a)
+int     is_sorted(t_node *stack)
 {
 
 }
 
-int	valid_args(t_node *a)
-{
-	int	*array;
-
-	array = parser(a);
-	while (a != NULL)
-	{
-
-	}
-}
-
-int	check_size(t_node a)
+void    init_stack(t_node **a, char **av)
 {
 
 }
