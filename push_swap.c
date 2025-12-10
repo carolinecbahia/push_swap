@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:49:30 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/07 17:05:04 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/09 19:43:00 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,16 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc < 2 || (argc == 2 && argv[1][0]))
-		return (1);
-	create_list(&stack_a, argv + 1, argc == 2);
-	if (check_args(stack_a))
+	i = 1;
+	while (i < argc)
 	{
-		ft_free_stack(&stack_a);
-		ft_putstr_fd("Error\n", 2);
-		return (1);
+		init_stack(&stack_a, argv[i]);
+		i++;
 	}
-	if (check_size(stack_a) == 3)
-		sort_three(stack_a);
-	else if (check_size(stack_a) == 5)
-		sort_five(stack_a);
+	if (!stack_a)
+		error_and_free_stack(&stack_a);
 	else
-		radix(stack_a, stack_b);
-	free_stack(stack_a, stack_b);
+		sort_stack(&stack_a, &stack_b);
+	free_stacks(&stack_a, &stack_b);
 	return (0);
 }

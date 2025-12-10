@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   commands_a.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/02 22:33:46 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/09 19:53:24 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,7 @@
 
 void	sa(t_node **a)
 {
-	int		temp_value;
-	int		temp_index;
-	t_node	*head;
-	t_node	*next;
-
-	if (!a || !(*a) || !(*a)->next)
-		return ;
-	head = *a;
-	next = head->next;
-	temp_value = head->value;
-	head->value = next->value;
-	next->value = temp_value;
-	temp_index = head->index;
-	head->index = next->index;
-	next->index = temp_index;
+	swap(a);
 	ft_printf("sa\n");
 }
 
@@ -40,16 +26,12 @@ void	pa(t_node **a, t_node **b)
 
 void	ra(t_node **a)
 {
-	if(!a || !(*a) || !(*a)->next)
-		return ;
-	*a = (*a)->next;
+	rotate(a);
 	ft_printf("ra\n");
 }
 
 void	rra(t_node **a)
 {
-	if (!a || !(*a) || (*a)->next == *a)
-		return ;
-	*a = (*a)->prev;
+	reverse_rotate(a);
 	ft_printf("rra\n");
 }

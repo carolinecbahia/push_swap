@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validation.c                                       :+:      :+:    :+:   */
+/*   commands_all.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 14:33:17 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 16:03:32 by ccavalca         ###   ########.fr       */
+/*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
+/*   Updated: 2025/12/09 19:53:14 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int     is_sorted(t_node *stack)
+void	ss(t_node **a, t_node **b)
 {
-
+	swap(a);
+	swap(b);
+	ft_printf("ss");
 }
 
-void    init_stack(t_node **a, char *av)
+void	rr(t_node **a, t_node **b)
 {
+	rotate(a);
+	rotate(b);
+	ft_printf("rr");
+}
 
+void	rrr(t_node **a, t_node **b)
+{
+	reverse_rotate(a);
+	reverse_rotate(b);
+	ft_printf("rrr");
 }

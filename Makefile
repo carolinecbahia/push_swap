@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 15:18:11 by ccavalca          #+#    #+#              #
-#    Updated: 2025/12/07 17:01:49 by ccavalca         ###   ########.fr        #
+#    Updated: 2025/12/09 15:56:26 by ccavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,18 @@ CFLAGS = -Wall -Wextra -Werror -I./Libft -I./ft_printf
 LIBFT_DIR = Libft/
 PRINTF_DIR = ft_printf/
 
-# SRC =	push_swap.c \
-# 		clean_and_error.c \
-# 		commands_a.c \
-# 		commands_b.c \
-# 		commands_gen.c \
-# 		sort.c \
-# 		sort_utils.c \
+SRC =	push_swap.c \
+		clean_and_error.c \
+		commands_all.c \
+		commands_a.c \
+		commands_b.c \
+		commands_utils.c \
+		stack_utils.c \
+		validation.c \
+		validation_utils.c \
+		sort.c \
+		sort_utils.c \
+		radix_sort.c \
 
 OBJS = $(SRC:.c=.o)
 
@@ -33,7 +38,7 @@ PRINTF_A = $(PRINTF_DIR)/libftprintf.a
 all: $(NAME)
 
 $(NAME): $(LIBFT_A) $(PRINTF_A) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME_S)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME)
 
 $(LIBFT_A):
 	make -C $(LIBFT_DIR)

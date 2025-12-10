@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 16:29:57 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/07 16:53:24 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/09 15:39:43 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ void	sort_three(t_node **a)
 }
 
 void	sort_five(t_node **a)
+{
+
+}
+
+void	bubble_sort(t_node **stack)
 {
 
 }
