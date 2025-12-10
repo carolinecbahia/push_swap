@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 17:05:11 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 21:07:23 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/09 21:11:49 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_node	*create_node(int value)
 
 void	stack_add_back(t_node **stack, t_node *new_node)
 {
-	
+
 }
 
 int	get_stack_size(t_node *stack)
@@ -37,5 +37,5 @@ int	get_stack_size(t_node *stack)
 
 t_node	*get_last_node(t_node *stack)
 {
-	
+
 }
