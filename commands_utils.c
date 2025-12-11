@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:28:50 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 19:53:52 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:41:29 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ void	push(t_node **src, t_node **dest)
 		(*dest)->prev = node_to_move;
 		*dest = node_to_move;
 	}
+}
+
+void	pop(t_node **src, t_node **dest)
+{
+	
 }
 
 void	swap(t_node **stack)

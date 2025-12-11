@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 14:59:20 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 19:47:09 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/11 17:46:19 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	init_stack(t_node **a, char *av);
 //list utils
 t_node	*create_node(int value);
 void	stack_add_back(t_node **stack, t_node *new_node);
+void	stack_add_front(t_node **stack, t_node *new_node);
 int		get_stack_size(t_node *stack);
 t_node	*get_last_node(t_node *stack);
 
