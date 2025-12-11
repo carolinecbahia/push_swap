@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 17:49:18 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/07 17:53:25 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/11 16:13:43 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void parser(t_node **a, char **av_split)
     int i;
     int ac;
     
+	if (!a)
+		return (NULL);
+	while()
 }
 
 long    ft_atol(char *str_nb)
