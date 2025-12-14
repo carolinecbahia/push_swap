@@ -6,7 +6,7 @@
 #    By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 15:18:11 by ccavalca          #+#    #+#              #
-#    Updated: 2025/12/14 14:59:19 by ccavalca         ###   ########.fr        #
+#    Updated: 2025/12/14 15:06:29 by ccavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,13 +51,13 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@echo "🧹 Limpando objetos..."
-	rm -rf $(OBJS_DIR)
-	make -C $(LIBFT_DIR) clean --no-print-directory
+	@rm -rf $(OBJ_DIR)
+	@make -C $(LIBFT_DIR) clean --no-print-directory
 
 fclean: clean
 	@echo "🗑️ Removendo executável..."
-	rm -f $(NAME)
-	make -C $(LIBFT_DIR) fclean --no-print-directory
+	@rm -f $(NAME)
+	@make -C $(LIBFT_DIR) fclean --no-print-directory
 
 re: fclean all
 
