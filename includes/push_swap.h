@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 14:59:20 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/14 14:24:48 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/14 15:00:11 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "Libft/libft.h"
-# include "ft_printf/ft_printf.h"
+# include "libft/libft.h"
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648

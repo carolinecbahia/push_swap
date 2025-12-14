@@ -6,16 +6,17 @@
 #    By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 15:18:11 by ccavalca          #+#    #+#              #
-#    Updated: 2025/12/14 14:14:01 by ccavalca         ###   ########.fr        #
+#    Updated: 2025/12/14 14:59:19 by ccavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I./Libft -I./ft_printf
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I./includes -I./libft
 
-LIBFT_DIR = Libft/
-PRINTF_DIR = ft_printf/
+SRC_DIR = src
+OBJ_DIR = objs
+LIBFT_DIR = libft
 
 SRC =	push_swap.c \
 		clean_and_error.c \
@@ -31,35 +32,33 @@ SRC =	push_swap.c \
 		radix_sort.c \
 
 LIBFT_A = $(LIBFT_DIR)/libft.a
-PRINTF_A = $(PRINTF_DIR)/libftprintf.a
-OBJS = $(SRC:.c=.o)
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(LIBFT_A) $(PRINTF_A) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME)
-
+$(NAME): $(LIBFT_A) $(OBJS)
+	@echo "🔗 Linkando $(NAME)..."
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT_A) -o $(NAME)
+	@echo "✅ $(NAME) compilado com sucesso!"
+	
 $(LIBFT_A):
-	make -C $(LIBFT_DIR)
+	@echo "📚 Compilando Libft..."
+	make -C $(LIBFT_DIR) --no-print-directory
 
-$(PRINTF_A):
-	make -C $(PRINTF_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(NAME_BONUS)
+clean:
+	@echo "🧹 Limpando objetos..."
+	rm -rf $(OBJS_DIR)
+	make -C $(LIBFT_DIR) clean --no-print-directory
 
-$(NAME_BONUS): $(PRINTF_A) $(LIBFT_A) $(BONUS_OBJS)
-	$(CC) $(CFLAGS) $(BONUS_OBJS) $(LIBFT_A) $(PRINTF_A) -o $(NAME_BONUS)
+fclean: clean
+	@echo "🗑️ Removendo executável..."
+	rm -f $(NAME)
+	make -C $(LIBFT_DIR) fclean --no-print-directory
 
 re: fclean all
 
-clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
-	make clean -C $(LIBFT_DIR)
-	make clean -C $(PRINTF_DIR)
-
-fclean: clean
-	rm -f $(NAME) $(NAME_BONUS)
-	make fclean -C $(LIBFT_DIR)
-	make fclean -C $(PRINTF_DIR)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
