@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 14:59:20 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/11 17:46:19 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/13 14:28:28 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		print_error(t_node **stack);
 
 //validations
 void	parser(t_node **a, char **av_split);
-long	ft_atol(char *str_nb);
+long    ft_atol(char *nptr);
 int		check_syntax(char *str);
 int		check_duplicate(t_node *stack, int n);
 int		is_numeric(char *str);
@@ -50,22 +50,26 @@ void	stack_add_front(t_node **stack, t_node *new_node);
 int		get_stack_size(t_node *stack);
 t_node	*get_last_node(t_node *stack);
 
-//sort
+//sort and utils
+t_node	*find_smallest(t_node *a);
+t_node	*find_biggest(t_node *a);
 void	sort_stack(t_node **a, t_node **b);
 void	sort_two(t_node **a);
 void	sort_three(t_node **a);
 void	sort_five(t_node **a);
-void	bubble_sort(t_node **stack);
 
-//radix
-void	*indexer(t_node *a);
+//radix sort
+int		*copy_list(t_node **a);
+int		*sorter(t_node **a, int *arr_a);
+void	indexer(t_node **a);
 void	radix_sort(t_node **a, t_node **b);
 
 //commands
 void	swap(t_node **stack);
 void	rotate(t_node **stack);
 void	reverse_rotate(t_node **stack);
-void	push(t_node **src, t_node **dest);
+void	push(t_node **stack, t_node *node_to_add);
+t_node	*pop(t_node **stack);
 void	sa(t_node **a);
 void	sb(t_node **b);
 void	ss(t_node **a, t_node **b);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   commands_b.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 19:53:39 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/13 21:22:56 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ void	sb(t_node **b)
 
 void	pb(t_node **b, t_node **a)
 {
-	push(a, b);
+	t_node	*node;
+	
+	node = pop(a);
+	if (node)
+		push(b, node);
 	ft_printf("pb\n");
 }
 
@@ -30,7 +34,7 @@ void	rb(t_node **b)
 	ft_printf("rb\n");
 }
 
-void	rra(t_node **b)
+void	rrb(t_node **b)
 {
 	reverse_rotate(b);
 	ft_printf("rrb\n");

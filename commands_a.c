@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   commands_a.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 15:18:04 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/09 19:53:24 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/13 13:42:20 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ void	sa(t_node **a)
 
 void	pa(t_node **a, t_node **b)
 {
-	push(b, a);
+	t_node	*node;
+	
+	node = pop(b);
+	if (node)
+		push(a, node);
 	ft_printf("pa\n");
 }
 

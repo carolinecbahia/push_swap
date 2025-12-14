@@ -3,51 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   commands_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccavalca <ccavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:28:50 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/11 17:41:29 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/13 21:23:17 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_node **src, t_node **dest)
+t_node	*pop(t_node **stack)
 {
-	t_node	*node_to_move;
-
-	if (!*src)
-		return ;
-	node_to_move = *src;
-	if (node_to_move->next == node_to_move)
-		*src = NULL;
-	else
-	{
-		*src = node_to_move->next;
-		(*src)->prev = node_to_move->prev;
-		node_to_move->prev->next = *src;
-	}
-	if (!dest)
-	{
-		*dest = node_to_move;
-		node_to_move->next = node_to_move;
-		node_to_move->prev = node_to_move;
-	}
-	else
-	{
-		node_to_move->next = *dest;
-		node_to_move->prev = (*dest)->prev;
-		(*dest)->prev->next = node_to_move;
-		(*dest)->prev = node_to_move;
-		*dest = node_to_move;
-	}
-}
-
-void	pop(t_node **src, t_node **dest)
-{
+	t_node	*node_to_remove;
 	
+	if (!*stack)
+		return (NULL);
+	node_to_remove = *stack;
+	if (node_to_remove->next == node_to_remove)
+		*stack = NULL;
+	else
+	{
+		*stack = node_to_remove->next;
+		(*stack)->prev = node_to_remove->prev;
+		node_to_remove->prev->next = *stack;
+	}
+	node_to_remove->next = NULL;
+	node_to_remove->prev = NULL;
+	return (node_to_remove);
 }
 
+void	push(t_node **stack, t_node *node_to_add)
+{
+	if (!node_to_add)
+		return ;
+	if (!*stack)
+	{
+		*stack = node_to_add;
+		node_to_add->next = node_to_add;
+		node_to_add->prev = node_to_add;
+	}
+	else
+	{
+		node_to_add->next = *stack;
+		node_to_add->prev = (*stack)->prev;
+		(*stack)->prev->next = node_to_add;
+		(*stack)->prev = node_to_add;
+		*stack = node_to_add;
+	}
+}
+  
 void	swap(t_node **stack)
 {
 	int		temp_value;
@@ -78,5 +82,5 @@ void	reverse_rotate(t_node **stack)
 {
 	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
-	*stack = (*stack)->next;
+	*stack = (*stack)->prev;
 }
