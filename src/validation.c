@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 14:33:17 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/14 13:48:03 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/14 17:03:14 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ void	init_stack(t_node **a, char **av)
 	parser(a, av);
 	if (!*a)
 		return ;
+	if (check_duplicate(*a) != 0)
+	{
+		print_error(a);
+		exit(1);
+	}
 	if (is_sorted(*a) != 0)
 	{
 		free_stacks(a, NULL);
 		exit(0);
-	}
-	else if (check_duplicate(*a) != 0)
-	{
-		print_error(a);
-		exit(1);
 	}
 }
