@@ -69,11 +69,15 @@ The allowed operations are:
 
 > [!TIP]
 >**References**
+	[Classificação DSA Radix ](https://www-w3schools-com.translate.goog/dsa/dsa_algo_radixsort.php?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc)
+	[Radix Sort Algorithm](https://www.interviewcake.com/concept/java/radix-sort)
 
 >[!CAUTION]
 >Tasks assisted by AI:
 
     Concept Explanation: [Used AI to understand the difference between Quick Sort and Radix Sort complexity and organize the logical structure of the project.]
+
+	Productivity: [Used AI to help control the tasks during the implemantation of the project.]
 
     Debugging: [Used AI to help identify a segmentation fault in the linked list implementation.]
 
