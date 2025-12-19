@@ -100,6 +100,8 @@ void	parser(t_node **a, char **av_split)
 	i = 0;
 	while (av_split[i])
 	{
+		if (!av_split[i] || av_split[i][0] == '\0')
+			error_exit(a, NULL);
 		temp = ft_split(av_split[i], ' ');
 		if (!temp)
 			error_exit(a, NULL);
