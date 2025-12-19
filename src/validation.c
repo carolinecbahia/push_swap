@@ -6,13 +6,13 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 14:33:17 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/14 17:03:14 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/19 18:28:06 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_sorted(t_node *stack)
+int	is_sorted(t_node *stack)
 {
 	t_node	*current;
 

@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/23 14:59:20 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/14 15:02:11 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/19 19:00:18 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		check_syntax(char *str);
 int		check_duplicate(t_node *stack);
 int		is_numeric(char *str);
 void	init_stack(t_node **a, char **av);
+int		is_sorted(t_node *stack);
 
 //list utils
 t_node	*create_node(int value);
@@ -61,6 +62,11 @@ void	sort_stack(t_node **a, t_node **b);
 //radix sort
 void	indexer(t_node **a);
 void	radix_sort(t_node **a, t_node **b);
+
+//radix utils
+int		get_max_bits(t_node **stack);
+int		count_bit_zeros(t_node **a, int bit);
+void	sort_bit_adaptive(t_node **a, t_node **b, int bit);
 
 //commands
 void	swap(t_node **stack);

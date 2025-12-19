@@ -1,0 +1,19 @@
+# Object files and binaries
+*.o
+*.a
+*.so
+push_swap
+checker
+
+# Directories to ignore
+objs/
+tester/
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Test files
+test_check.txt
+traces.txt
+0

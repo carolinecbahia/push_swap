@@ -6,7 +6,7 @@
 #    By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/23 15:18:11 by ccavalca          #+#    #+#              #
-#    Updated: 2025/12/14 15:06:29 by ccavalca         ###   ########.fr        #
+#    Updated: 2025/12/19 18:46:14 by ccavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC =	push_swap.c \
 		sort.c \
 		sort_utils.c \
 		radix_sort.c \
+		radix_utils.c \
 
 LIBFT_A = $(LIBFT_DIR)/libft.a
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))

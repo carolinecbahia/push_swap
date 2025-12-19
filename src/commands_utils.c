@@ -6,7 +6,7 @@
 /*   By: ccavalca <ccavalca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:28:50 by ccavalca          #+#    #+#             */
-/*   Updated: 2025/12/14 11:47:36 by ccavalca         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:44:48 by ccavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	swap(t_node **stack)
 	if (!stack || !(*stack) || !(*stack)->next)
 		return ;
 	head = *stack;
-	next = head->next;
+	next = (*stack)->next;
 	temp_value = head->value;
 	head->value = next->value;
 	next->value = temp_value;
