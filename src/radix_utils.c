@@ -53,28 +53,14 @@ int	get_max_bits(t_node **stack)
 void	sort_bit_adaptive(t_node **a, t_node **b, int bit)
 {
 	int	size;
-	int	zeros;
-	int	bit_value;
 
 	size = get_stack_size(*a);
-	zeros = count_bit_zeros(a, bit);
 	while (size > 0)
 	{
-		bit_value = ((*a)->index >> bit) & 1;
-		if (zeros > size / 2)
-		{
-			if (bit_value == 0)
-				pb(b, a);
-			else
-				ra(a);
-		}
+		if ((((*a)->index >> bit) & 1) == 0)
+			pb(b, a);
 		else
-		{
-			if (bit_value == 1)
-				pb(b, a);
-			else
-				ra(a);
-		}
+			ra(a);
 		size--;
 	}
 }
